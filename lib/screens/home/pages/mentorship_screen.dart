@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../../utils/constants.dart';
 
 class MentorshipScreen extends StatelessWidget {
-  const MentorshipScreen({Key? key}) : super(key: key);
+  const MentorshipScreen({super.key});
 
   final List<Map<String, dynamic>> _mentors = const [
     {
@@ -142,8 +142,8 @@ class MentorshipScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                _buildStatColumn('Score', mentor['score']),
-                _buildStatColumn('Specialty', mentor['specialty']),
+                _buildStatColumn('Score', '${mentor['score']}'),
+                _buildStatColumn('Specialty', '${mentor['specialty']}'),
                 _buildStatColumn('Mentees', '${mentor['mentees']}'),
               ],
             ),
